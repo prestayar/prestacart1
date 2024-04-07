@@ -1,0 +1,104 @@
+/*
+ * PrestaCart
+ * @version  1.0
+ *
+ * @author Hashem Afkhami @ prestayar.com <hashem_afkhami@yahoo.com>
+ * @copyright  2014 prestayar.com
+
+ *
+ */
+
+.PSCart input:focus, .PSCart select:focus, .PSCart textarea:focus {
+	border: 1px solid #6CBDB5;
+}
+
+.PSCart input.btn, .PSCart a.btn, .PSCart input[type=submit] {
+	background: #6CBDB5;
+}
+
+.PSCart input.btn:hover, .PSCart a.btn:hover {
+	background: #93CCC6;
+}
+
+.PSCart .big-title {
+	border-bottom: 3px double #0585D0;
+	color: #0585D0;
+}
+
+.PSCart .big-title:after {
+	background: #0585D0;
+}
+
+.PSCart thead {
+	background: #32B1E8;
+}
+
+.PSCart th {
+border-left: 1px solid rgba( 255, 255, 255, 0.2);
+}
+
+.PSCart .cart_quantity_input {
+	background: #6CBDB5;
+}
+
+.PSCart .cart_quantity_down, .PSCart .cart_quantity_up {
+	background: #93CCC6;
+}
+
+.PSCart td.cart_total span {
+	color: #373B44;
+}
+
+.PSCart td.cart_delete a, .PSCart .price_discount_del a {
+	background: #C44D58;
+}
+
+.PSCart td.cart_delete a:hover, .PSCart .price_discount_del a:hover {
+	color: #fff;
+	background: #C44D58;
+	opacity: 0.8;
+}
+
+.PSCart .choose {
+	background: #275DA1;
+}
+
+
+.PSCart .choose .btn {
+	background: #4DA4D3;
+	color: #fff;
+}
+
+.PSCart .choose .btn:hover {
+	background: #4DA4D3;
+	opacity: 0.8;
+}
+
+.PSCart .discount {
+	background: #57ADDD;
+}
+
+.PSCart .total_price_container {
+	background: #1B5195;
+}
+
+.PSCart .discount_name_block input {
+	background: rgba(0,0,0,0.1);
+}
+
+.PSCart .tabhead {
+	border-bottom: 5px solid #1B5195;
+	background: #1B5195;
+}
+
+.PSCart .tabhead.active {
+	background: #275DA1;
+}
+
+.PSCart #step3 td.price {
+	background: #57ADDD;
+}
+.PSCart .dbs-steps .prev:hover a,
+.PSCart .dbs-steps .next:hover a{
+	color:#32B1E8;
+}

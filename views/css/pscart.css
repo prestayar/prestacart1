@@ -1,0 +1,982 @@
+/*
+ * PrestaCart
+ * @version  1.0
+ *
+ * @author Hashem Afkhami @ prestayar.com <hashem_afkhami@yahoo.com>
+ * @copyright  2014 prestayar.com
+
+ *
+ */
+
+@font-face {
+  font-family: 'Yekan';
+  src: url('font/Yekan.woff') format('woff');
+}
+
+.PSCart {
+	font: 13px 'Yekan', 'B Yekan' !important;
+	margin: 1.5em auto;
+	font-weight: normal !important;
+	zoom: 1 !important;
+}
+
+.PSCart * {
+	font-family: 'Yekan', 'B Yekan' !important;
+	zoom: 1 !important;
+	margin: 0;
+	padding: 0;
+	font-weight: normal !important;
+	outline: none;
+}
+.PSCart .hook_extracarrier * {
+    zoom: 1 !important;
+    margin: 0;
+    padding: 0;
+    font-weight: normal !important;
+    outline: none;
+}
+
+.PSCart input {
+	line-height: 1.6;
+	height: auto;
+	padding: 0 10px;
+	border-radius: 6px;
+	background: #fff;
+	color: #555;
+	border: none;
+	outline: none;
+	min-height:40px;
+}
+
+.PSCart input, .PSCart textarea {
+	width: 100%;
+	border: 1px solid rgba(0,0,0,0.1);
+	margin: 0.5em 0 1em;
+	line-height: 3;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.PSCart input.ltr {
+	text-align: left;
+	direction: ltr !important;
+}
+
+.PSCart input:focus, .PSCart select:focus, .PSCart textarea:focus {
+	border: 1px solid #aaa;
+}
+
+.PSCart input.btn, .PSCart a.btn, .PSCart input[type=submit] {
+	height: 40px;
+	line-height: 40px;
+	background: #777;
+	color: #fff;
+	border-radius: 6px;
+	padding: 0 10px !important;
+	font-size: 18px;
+	margin: 0;
+}
+
+.PSCart input.btn:hover, .PSCart a.btn:hover {
+	background: #666;
+}
+
+.PSCart .big-title {
+	font-size: 22px;
+	margin: 1em 0;
+	padding-bottom: 1em;
+	border-bottom: 3px double #555;
+	text-align: center;
+	position: relative;
+	color: #555;
+}
+
+.PSCart .big-title:after {
+	content: '';
+	width: 50px;
+	height: 3px;
+	bottom: -3px;
+	right: 50%;
+	margin-right: -25px;
+	position: absolute;
+	background: #555;
+}
+
+.PSCart h6.yep {
+	border-color: #2ecc71;
+}
+
+
+.PSCart h6.yep:after {
+	background: #2ecc71;
+}
+
+.PSCart:after {
+	content: ' ';
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+.PSCart table, .PSCart th, .PSCart thead {
+	text-shadow: none !important;
+	font-weight: normal !important;
+}
+
+.PSCart table {
+	width: 100%;
+	border-radius: 6px;
+	overflow: hidden;
+	background: rgba(0,0,0,0.02);
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.PSCart thead {
+	background: #888;
+	color: #FFF;
+}
+
+.PSCart th {
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	border-left: 1px solid rgba( 255, 255, 255, 0.1 );
+	line-height: 2.5;
+	letter-spacing: -0.5px;
+}
+
+.PSCart td {
+	text-align: center;
+	vertical-align: middle;
+	border-left: 1px solid rgba( 0, 0, 0, 0.1 );
+	border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+	padding: 5px;
+}
+
+.PSCart .cart_product img {
+	border-radius: 50%;
+	width: 98px;
+	height: 98px;
+}
+
+.PSCart .cart_product {
+	width: 98px;
+}
+
+.PSCart .cart_total {
+	width: 15%;
+}
+
+.PSCart .cart_description {
+	width: auto;
+}
+
+.PSCart .cart_quantity {
+	width: 15%;
+}
+
+.PSCart .cart_unit {
+	width: 15%;
+}
+
+.PSCart .cart_delete {
+	width: 10%;
+}
+
+.PSCart td.cart_unit span,
+.cart_unit .price {
+	font-size: 18px !important;
+	list-style:none;
+}
+
+.PSCart .cart_quantity .cart_quantity_input {
+	border: none;
+	outline: none;
+	width: 40% !important;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	min-height:30px;
+	font-size: 13px;
+	display: inline-block !important;
+	border-radius: 0;
+	bottom: auto;
+	margin: 0 !important;
+}
+
+.PSCart .cart_quantity_input {
+	background: #555;
+}
+
+.PSCart .cart_quantity_down, .PSCart .cart_quantity_up {
+	width: 30%;
+	color: #fff;
+	background: #666;
+	text-align: center;
+	display: inline-block;
+	line-height: 30px;
+	font-size: 13px;
+	height: 30px;
+	float: right;
+	border-radius: 0 6px 6px 0;
+}
+
+.PSCart .cart_quantity_down {
+	float: left;
+	border-radius: 6px 0 0 6px;
+}
+
+.PSCart .cart_quantity_down:hover, .PSCart .cart_quantity_up:hover {
+	opacity: 0.9;
+}
+
+.PSCart td.cart_total span {
+	font-size: 18px;
+	color: #333;
+}
+
+.PSCart td.cart_delete a, .PSCart .price_discount_del a {
+	font-size: 13px;
+	background: #e74c3c;
+	line-height: 1;
+	padding: 0.5em 0.7em;
+	border-radius: 6px;
+	display: inline-block;
+	color: #fff;
+}
+
+.PSCart td.cart_delete a:hover {
+	background: #c0392b;
+}
+
+.PSCart .choose {
+	background: #777;
+	color: #fff !important;
+	text-align: right;
+}
+
+.PSCart .choose select,
+.PSCart .address_delivery select {
+	background: #fff;
+	border: none;
+	height: 30px;
+	line-height: 30px;
+	color: #444;
+	float: right;
+	width: 40%;
+	margin-left: 10px;
+	border-radius: 6px;
+	padding: 0 10px;
+	display:block;
+}
+
+.PSCart .choose .btn {
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+	color: #555;
+	border-radius: 6px;
+	padding: 0 10px !important;
+	width: auto;
+	min-height: 30px;
+}
+
+.PSCart .choose .btn:hover {
+	background: #444;
+	color:#fff;
+}
+
+.PSCart .discount {
+	background: #999;
+	color: #fff;
+}
+
+.PSCart .discount span.voucher_name {
+	color: #fff !important;
+	font: 100 12px Arial !important;
+}
+
+.PSCart .total_price_container {
+	color: #fff !important;
+	background: #444 !important;
+	font-size: 13px !important;
+	line-height: 30px !important;
+}
+
+.PSCart .total_price_container #total_price {
+	font-size: 18px;
+}
+
+.PSCart .discount_name_block {
+	text-align: right;
+	color: #fff;
+	line-height: 30px;
+}
+
+.PSCart .discount_name_block label {
+	color: #fff;
+}
+
+.PSCart .discount_name_block input {
+	float: left;
+	height: 30px;
+	background: #777;
+	margin: 0 10px 0 0;
+	line-height: 30px;
+	color: #fff;
+	width: auto;
+	border: none;
+}
+
+.PSCart .discount_name_block input[type=text] {
+	direction: ltr;
+	text-align: left;
+	font: 13px Arial !important;
+}
+
+
+.PSCart .tabhead {
+	width: 50%;
+	height: 60px;
+	border-bottom: 5px solid #999;
+	line-height: 60px;
+	background: #888;
+	font-size: 20px;
+	text-align: center;
+	display: block;
+	float: right;
+	color: #fff;
+}
+
+.PSCart .full .tabhead {
+	width: 100%;
+	border-bottom-width: 3px !important;
+	border-radius: 6px !important;
+	float: none;
+	margin: 1em 0;
+}
+
+.PSCart .tabhead.active {
+	background: #999;
+}
+
+.PSCart .tabhead:first-of-type {
+	border-radius: 0 6px 0 0;
+}
+
+.PSCart .tabhead:last-of-type {
+	border-radius: 6px  0 0 0;
+}
+
+.PSCart .tabbox {
+	display: none;
+	background: rgba(0,0,0,0.02);
+	padding: 1.5em;
+	border-radius: 0 0 6px 6px;
+}
+
+.PSCart .full .tabbox {
+	border-radius: 6px;
+}
+
+.PSCart .ajax_black {
+    background: #000000;
+    left: 0;
+    display:none;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.6;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    z-index: 999999;
+    border-radius: 6px;
+}
+
+.PSCart .ajax_black span {
+  position: absolute;
+  right:0;
+  left: 0;
+  display:block;
+  text-align: center;
+  height: 20px;
+  font-size: 18px;
+  line-height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  color: #fff;
+}
+
+.PSCart .alert {
+	background: #fff2db;
+	padding: 1.5em;
+	border-radius: 6px;
+	border: 1px solid #ffe4b4;
+	color: #e89f21;
+	margin: 40px 0 1.2em;
+	position: relative;
+	text-align: justify;
+}
+
+.PSCart .alert:before {
+	content: '?';
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background: #FFD283;
+	text-align: center;
+	color: #fff;
+	right: 50%;
+	margin-right: -20px;
+	top: -25px;
+	position: absolute;
+	font: bold 18px/40px arial;
+}
+
+.PSCart .deliveryOptionRadio {
+    display: inline-block;
+    float: right !important;
+    line-height: 1;
+	margin: 0 0 0 1em;
+	width: auto;
+    height: 40px;
+}
+
+.PSCart .deliveryOptionLabel {
+    display: inline-block;
+    float: right !important;
+    margin: 0;
+    width: auto;
+    line-height: 30px;
+	font-size: 13px;
+	text-align:right;
+}
+
+.PSCart .deliveryOptionLabel span {
+    font-size: 18px;
+    margin-left: 1em;
+}
+
+.PSCart #step3 td.price {
+	background: #aaa;
+	color: #fff !important;
+}
+
+.PSCart #step3 a#pay {
+	height: 50px;
+	line-height: 44px;
+	border: 3px double #fff;
+	color:#fff;
+}
+
+.PSCart #step3 a b {
+	background: #f90;
+	color: #fff;
+	padding: 7px;
+	margin: 5px;
+	font-weight: normal;
+	border-radius: 6px;
+}
+
+.PSCart #step3 a:hover b {
+	opacity: 0.8;
+}
+
+.PSCart .addressBlock {
+	border-radius: 6px;
+	padding: 1.5em;
+	background: rgba(0,0,0,0.02);
+	position:relative;
+}
+.PSCart .addressBlock .LinkEditAddress{
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+.PSCart .address_delivery{
+	border-radius: 6px;
+	padding: 1em;
+	margin-bottom:10px;
+	background: rgba(0,0,0,0.02);
+}
+.PSCart .address_delivery select{
+	width:100%;
+	border:1px solid #ddd;
+	float:none;
+}
+.PSCart .address_delivery label{
+	width:100%;
+}
+
+.PSCart .address li.address_title {
+	font-size: 13px;
+}
+
+.PSCart .address li.address_name {
+	font-size: 18px;
+}
+
+@media (max-width: 598px) {
+
+	.PSCart th {
+		display: none;
+	}
+
+	.PSCart td {
+		display: block !important;
+		width: 100% !important;
+	}
+
+	.PSCart .cart_description p a { display: inline; }
+
+	.PSCart select, .PSCart input, .PSCart textarea { width: 100% !important; margin: 5px 0; }
+
+	.PSCart input[type=radio], .PSCart input[type=checkbox]
+	.radio input[type="radio"], .radio-inline input[type="radio"],
+	.checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{ width: auto !important; }
+
+	.PSCart input[name=submitAddDiscount] { margin-top: 10px; }
+
+	.PSCart .choose .btn { display: block; width: 100%; margin: 5px 0; }
+
+	.PSCart .deliveryOptionRadio{ float: none !important; width: 20px; height: 20px; margin: 10px auto; }
+
+	.PSCart .deliveryOptionLabel { display: block; float: none !important; text-align: center; }
+
+	.PSCart .deliveryOptionLabel span { display: block; text-align: center; margin: 10px 0; }
+
+
+}
+
+.choose br { display: none; }
+
+.cart_quantity .cart_quantity_button {
+position: static;
+width: 100%;
+}
+
+
+.cart_quantity .cart_quantity_input {
+	float: none;
+	margin: 0 !important;
+	display: inline-block !important;
+}
+.total_price_container #total_price { display: block; }
+
+.PSCart input[type=submit] { cursor: pointer; }
+
+.PSCart .alert { font: 13px 'Yekan', 'B Yekan' !important; }
+
+.clearfix:before, .clearfix:after {
+content: " ";
+display: table;
+}
+
+.PSCart .form-radio label {
+    display: inline-block;
+    min-width: 50px !important;
+    width: 50px;
+}
+.PSCart .form-radio label input {
+    display: inline;
+    margin: 0 0 0 10px;
+    width: auto;
+}
+.PSCart label sup {
+    color: red;
+    font-size: 18px;
+    line-height: 12px;
+    padding-right: 6px;
+	display: inline-block;
+}
+.PSCart .checkbox input{
+	width:auto;
+	margin-left:8px !important;
+}
+.PSCart .checkbox,
+.PSCart .form-radio{
+	margin-bottom:15px;
+}
+.PSCart #loyalty {
+	display: inline-block;
+	text-align: justify;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.PSCart #loyalty i{display:none;}
+.PSCart  .msg.error{
+	display: block;
+	background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+    border-radius: 6px;
+    margin: 40px 0 1.2em;
+    padding: 1.5em;
+    position: relative;
+    text-align: justify;
+}
+.PSCart .alert.cod{
+	text-align:center;
+	font-size:18px !important;
+}
+.breadcrumb {
+	display:none;
+}
+
+
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot?95281800');
+  src: url('font/fontello.eot?95281800#iefix') format('embedded-opentype'),
+       url('font/fontello.svg?95281800#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('data:application/octet-stream;base64,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') format('woff'),
+       url('data:application/octet-stream;base64,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SCstsEossgAAQSstsEsssgABQSstsEwssgEAQSstsE0ssgEBQSstsE4ssgAAQistsE8ssgABQistsFAssgEAQistsFEssgEBQistsFIssgAAPistsFMssgABPistsFQssgEAPistsFUssgEBPistsFYssgAAQCstsFcssgABQCstsFgssgEAQCstsFkssgEBQCstsFossgAAQystsFsssgABQystsFwssgEAQystsF0ssgEBQystsF4ssgAAPystsF8ssgABPystsGAssgEAPystsGEssgEBPystsGIssDcrLrErARQrLbBjLLA3K7A7Ky2wZCywNyuwPCstsGUssAAWsDcrsD0rLbBmLLA4Ky6xKwEUKy2wZyywOCuwOystsGgssDgrsDwrLbBpLLA4K7A9Ky2waiywOSsusSsBFCstsGsssDkrsDsrLbBsLLA5K7A8Ky2wbSywOSuwPSstsG4ssDorLrErARQrLbBvLLA6K7A7Ky2wcCywOiuwPCstsHEssDorsD0rLbByLLMJBAIDRVghGyMhWUIrsAhlsAMkUHiwARUwLQBLuADIUlixAQGOWbABuQgACABjcLEABUKxAAAqsQAFQrEACCqxAAVCsQAIKrEABUK5AAAACSqxAAVCuQAAAAkqsQMARLEkAYhRWLBAiFixA2REsSYBiFFYugiAAAEEQIhjVFixAwBEWVlZWbEADCq4Af+FsASNsQIARAA=') format('truetype');
+}
+.PSCart  [class^="icon-"]:before,.PSCart  [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+}
+.icon-angle-right:before { content: '\e800'; } /* '' */
+.icon-angle-left:before { content: '\e801'; } /* '' */
+.icon-right-open:before { content: '\e802'; } /* '' */
+.icon-left-open:before { content: '\e803'; } /* '' */
+
+.PSCart .dbs-steps{
+	margin-top:0 !important;
+}
+.PSCart .dbs-steps div{
+	display:inline-block;
+	width:25%;
+	font-size:18px;
+}
+.PSCart .dbs-steps div.dbs-step-title{
+	width:50%;
+	font-size:22px;
+}
+.PSCart .dbs-steps .prev{
+	float:right;
+	min-height:1px;
+	text-align:right;
+}
+.PSCart .dbs-steps .next{
+	float:left;
+	min-height:1px;
+	text-align:left;
+}
+.PSCart .dbs-steps i{
+    font-size: 16px;
+}
+.PSCart #step1 .dbs-steps .prev i,
+.PSCart #step1 .dbs-steps .prev span{display:none;}
+
+.PSCart .dbs-steps .prev:hover a,
+.PSCart .dbs-steps .next:hover a{
+	color:#EB6841;
+}
+.PSCart #step3 a{
+	color: #e8a23f;
+}
+.PSCart .alert ul li,
+.PSCart .alert ol li {
+    line-height: 2;
+}
+
+.PSCart #step3 a#pay,
+.PSCart .choose .btn{
+	cursor: pointer;
+}
+
+.PSCart .price .old-price{
+	text-decoration:line-through;
+}
+
+
+@media (max-width: 991px) {
+	.PSCart .choose select{
+		 width: 100%;
+		 margin-bottom:10px;
+	}
+	.PSCart .deliveryOptionLabel span  {
+		display:block;
+		text-align:right;
+	}
+}
+@media (min-width: 598px) and (max-width: 768px) {
+	.PSCart .discount_name_block label  {
+		font-size:13px;
+	}
+	.PSCart .deliveryOptionLabel span  {
+		font-size:13px;
+	}
+	.PSCart .dbs-steps div,
+	.PSCart .dbs-steps i{
+		font-size:15px;
+	}
+}
+@media (max-width: 598px) {
+	/*.PSCart .discount_name_block input {
+		float:none;
+		margin-right: 0;
+	}*/
+	.PSCart .discount_name_block input.Button {
+		width: 100px !important;
+		float: left;
+	}
+	.PSCart .discount_name_block input[type=text] {
+		float: right;
+		width: calc(100% - 110px) !important;
+		margin-bottom: 10px;
+	}
+	.PSCart .cart_voucher td{
+		border-bottom: none;
+	}
+	.PSCart .choose select,
+	.PSCart .choose .btn{
+		float:none;
+	}
+	.PSCart .deliveryOptionLabel span  {
+		text-align:center;
+	}
+	.PSCart #gift{
+		width:auto !important;
+	}
+	.PSCart .dbs-steps div,
+	.PSCart .dbs-steps i{
+		font-size:13px;
+	}
+}
+
+
+/*
+update 3.0.0
+*/
+#messageConfirmation .alert{
+	text-align: center;
+	direction: ltr !important;
+}
+.PSCart td.cart_unit ul,
+.PSCart td.cart_unit li{
+	text-align: center;
+}
+
+.PSCart #gift_content .carrier_title {
+	font-weight: bold !important;
+	margin-bottom: 4px;
+	margin-top: 17px;
+	font-size: 15px;
+}
+.PSCart .checkbox label {
+	padding-right: 10px;
+}
+.PSCart span.labelMobile {
+	font-weight: bold !important;
+	display: none;
+}
+.PSCart #HOOK_PAYMENT{
+	margin-top: 20px;
+}
+.PSCart #step2 .form-radio label span {
+	display: block;
+	float: right;
+}
+.PSCart #step2 .form-radio label > span {
+	padding: 1px 7px;
+	margin-top: -3px;
+}
+.PSCart #step2 .form-radio div.radio span {
+	margin-top: 4px;
+}
+.PSCart #step3 .submit {
+	margin-top: 20px;
+}
+.PSCart .dbscod {
+	background: url(../img/cash.png) right 15px no-repeat #fbfbfb;
+}
+.PSCart textarea {
+	min-height: 100px;
+}
+.PSCart .total_price_container #total_price {
+	color: #fff !important;
+}
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+	height:auto;
+}
+.PSCart label {
+	color: #000;
+}
+.PSCart td,.PSCart  th {
+	border-radius: 0px;
+}
+.PSCart a {
+	color: #111;
+}
+.PSCart .address li {
+	line-height: 1.8;
+}
+@media (min-width: 598px) {
+	.PSCart #step3 div.radio {
+		display: block;
+		float: right;
+		padding-left: 30px;
+		padding-top: 13px;
+	}
+}
+@media (max-width: 598px) {
+	.PSCart span.labelMobile {
+		display: inline;
+	}
+}
+
+
+.PSCart .cart_quantity_down, .PSCart .cart_quantity_up{
+	position: relative !important;
+}
+.PSCart .cart_quantity .cart_quantity_input,
+.PSCart cart_quantity .cart_quantity_button {
+	float: none !important;
+}
+
+
+select:disabled {
+	background: #dddddd !important;
+}
+.PSCart .price-percent-reduction {
+	position: static !important;
+	display: block;
+	direction: rtl;
+}
+
+.PSCart .hide{
+	display: none;
+}
+.PSCart .carrierSpec{
+	padding: 0;
+	width: 60%;
+}
+.PSCart .carrierSpec .delivery_option_radio.first_item {
+	min-width: 60px;
+	width: 8%;
+	padding: 0;
+	border-bottom: none;
+}
+.PSCart .carrierSpec .delivery_option_logo {
+	min-width: 100px;
+	width: 27%;
+	padding: 5px;
+	border-bottom: none;
+}
+.PSCart #step3 .carrierSpec .delivery_option_radio.first_item  div.radio{
+	display: inline-block;
+	float: inherit;
+	padding-left: 0;
+	padding-top: 0;
+
+}
+.PSCart .carrierSpec .delivery_option_delay {
+	text-align: right;
+	border-left: none;
+	border-bottom: none;
+}
+
+.PSCart .icon-info-sign:before{
+	font-family: "FontAwesome";
+}
+
+.PSCart #total_price_without_tax{
+	display: block;
+	font-size: 20px;
+}
+.PSCart #total_shipping_text{
+	display: none;
+}
+
+.PSCart .cgvbox{
+	margin-top: 20px;
+}
+.PSCart #HOOK_PAYMENT p.warning {
+	color: #F13340;
+	font-weight: 700;
+}
+.PSCart .hook_extracarrier *{
+    font-family: 'Vazir', Tahoma, sans-serif !important;
+}
+.PSCart .hook_extracarrier table {
+    border-radius: 0;
+    background: #fff;
+}
+.PSCart .hook_extracarrier  thead {
+    background: transparent;
+    color: #222222;
+}
+.PSCart .hook_extracarrier  th {
+    font-size: 13px;
+    color: #222222;
+    text-align: center;
+    border-left: none;
+    line-height: normal;
+    letter-spacing: 0;
+}
+.PSCart .hook_extracarrier td {
+    text-align: center;
+    border-left: none;
+    border-bottom: none;
+    padding: 1px;
+}
+.PSCart .hook_extracarrier td a{
+    color: #555555 !important;
+    text-align: center;
+    font-size: 13px;
+}
+.PSCart .hook_extracarrier td span{
+    text-align: center;
+    font-size: 13px;
+}
+.PSCart .hook_extracarrier .icon,
+.PSCart .hook_extracarrier [class^="icon-"] {
+    display: inline-block;
+    font: normal  20px/1.5 FontAwesome !important;
+}
+.PSCart .hook_extracarrier .icon-truck{
+    font-size: 40px !important;
+    line-height: 1 !important;
+}
+.PSCart .hook_extracarrier .icon:before,
+.PSCart .hook_extracarrier [class^="icon-"]:before {
+    font-family:  FontAwesome !important;
+}
+.PSCart .hook_extracarrier #delivery-date-panel .calendar-wrapper {
+    padding:5px 15px;
+}
+.PSCart .hook_extracarrier #ddw_calendar .ui-datepicker {
+    padding: 3px;
+}
+
+.PSCart #address .submit,
+.PSCart #add_address .submit,
+.PSCart #identity .submit,
+.PSCart #account-creation_form .submit,
+.PSCart #new_account_form .submit{
+	padding-right: 0 !important;
+}

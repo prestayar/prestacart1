@@ -1,0 +1,10 @@
+.hide{
+	display:none;
+}
+.show{
+	display:block;
+}
+.textarea-ltr{
+	direction: ltr;
+	text-align: left;
+}
